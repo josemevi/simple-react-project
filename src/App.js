@@ -33,7 +33,6 @@ class App extends Component {
       monsters: [],
       searchField: ''
     };
-
     // this.handleChange = this.handleChange.bind(this); we have tp write this if we don't use ES6 way of bind context
   }
 
@@ -46,11 +45,6 @@ class App extends Component {
   handleChange = e =>{          // ES6 arrow functions leverage (use all the potential) to bind "this" context inside this function
     this.setState({'searchField' : e.target.value });  // this way of binding context is called lexicalbinding
   }
-
-  handleClick() {
-    console.log("klikeo")
-  }
-
 
   render() {
     const { monsters, searchField } = this.state;
